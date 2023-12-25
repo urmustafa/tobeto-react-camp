@@ -1,14 +1,12 @@
 import './App.css';
 
 function App() {
+
+  //mustafa
   return (
     <div className="App">
         merhaba
-        merhabamerhaba
-        ege 
-        mustafa
-        yasin
-        hüseyin
+
     </div>
   );
 }
