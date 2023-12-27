@@ -1,8 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css"
+import "./pages/Products/ProductDetail.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homepage from "./pages/Homepage/Homepage"
 import Products from "./pages/Products/Products"
 import Navbar from "./components/Navbar/Navbar"
+import ProductsDetail from "./pages/Products/ProductsDetail"
+import ProductDetails from "./pages/Products/ProductsDetail"
+import ProductsDelete from "./pages/Products/ProductsDelete"
 
 
 // JSX => HTML + JS
@@ -13,9 +17,11 @@ export default function App() {
     <Navbar />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="*" element={<div>Not found</div>}></Route>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/products/Delete/:id" element={<ProductsDelete/>}></Route>
+        <Route path="*" element={<div>Not found</div>} />
       </Routes>
     </BrowserRouter>
   </>

@@ -13,7 +13,7 @@ export default function Products() {
 	const axiosGet = async () => {
 		let response = await axios.get("https://dummyjson.com/products");
 		setProducts(response.data.products);
-		console.log(response.data.products);
+		console.log(response.data.products+"orginal");
 	};
 
 	// responsive?
