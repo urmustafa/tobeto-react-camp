@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {Link} from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Homepage() {
@@ -30,7 +30,10 @@ export default function Homepage() {
 
 	return (
 		<div>
-			<Link to={"/products"}>Ürünler Sayfası</Link>
+			<div className="container mt-4 py-4 m-3">
+					<Link to={"/products" } className="btn btn-success m-2">Ürünler Sayfası</Link>
+					<Link to={"/add" } className="btn btn-success m-2">Ürün Ekle</Link>
+			</div>
 		</div>
 	);
 }
